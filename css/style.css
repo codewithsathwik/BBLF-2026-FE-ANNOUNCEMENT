@@ -86,7 +86,7 @@ hr {
     background-color: var(--color-primary);
     color: var(--font-ink-main);
     padding: 0px 0px !important;
-    /* height: 100vh; */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
