@@ -72,6 +72,24 @@ section {
     cursor: pointer;
 }
 
+.back-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 40px !important;
+}
+
+@media (max-width : 700px) {
+    .back {
+        margin-bottom: 25px !important;
+    }
+}
+
 .btn:hover {
     background-color: var(--font-ink-alt);
     color: var(--font-ink-main);
