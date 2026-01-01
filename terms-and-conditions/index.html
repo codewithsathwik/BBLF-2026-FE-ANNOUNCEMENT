@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    
+
 
     <!-- terms and condition section -->
     <section class="terms-section">
@@ -176,8 +176,10 @@
             <div class="contact-details">
                 <h2>Contact Us</h2>
                 <p>Book Brahma Foundation</p>
-                <a href="https://maps.app.goo.gl/nqthLZp9FAtWGccN7" target="_blank" class="bb-address">3rd floor, RK Complex, Electronic City</a>
-                <a href="https://maps.app.goo.gl/nqthLZp9FAtWGccN7" target="_blank" class="bb-address">Bengaluru, Karnataka - 560100</a>
+                <a href="https://maps.app.goo.gl/nqthLZp9FAtWGccN7" target="_blank" class="bb-address">3rd floor, RK
+                    Complex, Electronic City</a>
+                <a href="https://maps.app.goo.gl/nqthLZp9FAtWGccN7" target="_blank" class="bb-address">Bengaluru,
+                    Karnataka - 560100</a>
                 <a class="bb-mail" href="mailto:info@bookbrahmalitfest.com"
                     target="_blank">info@bookbrahmalitfest.com</a>
                 <a class="bb-num" href="tel:7892608118" target="_blank">+91 789-260-8118</a>
@@ -199,7 +201,22 @@
 
     </footer>
 
-    <script src="/js/index.js"></script>
+    <script>
+        //add number to terms and condition
+        const numSpan = document.querySelectorAll(".term-num");
+        const conditions = document.querySelectorAll(".condition");
+        let conditionNum = 0;
+
+        if (conditions) {
+            conditions.forEach((condition) => {
+                let numSpan = condition.querySelectorAll(".term-num");
+                conditionNum += 1;
+                numSpan.forEach((numSpan) => {
+                    numSpan.textContent = conditionNum;
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>
