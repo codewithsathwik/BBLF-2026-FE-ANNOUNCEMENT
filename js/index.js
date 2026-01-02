@@ -20,57 +20,57 @@ let offset = 0;
 const defaultSize = 250; // in px 
 
 
-    playCards.forEach(async (card, i) => {
+playCards.forEach(async (card, i) => {
+    let link = card.getAttribute("data-target");
+    getYouTubeTitle(link, card, i);
+    card.addEventListener("click", () => {
+        playCards.forEach(crd => crd.classList.remove("active-slide"));
+        card.classList.add("active-slide");
+        let title = card.querySelector("img").alt;
+        changePlaylistSrc(link, title);
+    });
+});
+
+
+function changePlaylistSrc(link, title) {
+    playlistFrame.setAttribute("src", link);
+    playlistFrame.setAttribute("title", title);
+}
+
+function setThumbAlt(thumb, card, alt, i) {
+    let img = card.querySelector("img");
+    img.src = thumb;
+    img.setAttribute("alt", alt);
+    if (i === 0) {
         let link = card.getAttribute("data-target");
-        getYouTubeTitle(link, card, i);
-        card.addEventListener("click", () => {
-            playCards.forEach(crd => crd.classList.remove("active-slide"));
-            card.classList.add("active-slide");
-            let title = card.querySelector("img").alt;
-            changePlaylistSrc(link, title);
-        });
+        changePlaylistSrc(link, alt)
+    }
+}
+
+function applyTransform() {
+    playCards.forEach(card => {
+        card.style.transform = `translateX(-${offset}px)`;
     });
+}
 
+nextBtn.addEventListener("click", () => {
+    calculateOffsetWidth();
+    offset = Math.min(offset + defaultSize, maxOffset);
+    applyTransform();
+});
 
-    function changePlaylistSrc(link, title) {
-        playlistFrame.setAttribute("src", link);
-        playlistFrame.setAttribute("title", title);
-    }
+prevBtn.addEventListener("click", () => {
+    calculateOffsetWidth();
+    offset = Math.max(offset - defaultSize, 0);
+    applyTransform();
+});
 
-    function setThumbAlt(thumb, card, alt, i) {
-        let img = card.querySelector("img");
-        img.src = thumb;
-        img.setAttribute("alt", alt);
-        if (i === 0) {
-            let link = card.getAttribute("data-target");
-            changePlaylistSrc(link, alt)
-        }
-    }
-
-    function applyTransform() {
-        playCards.forEach(card => {
-            card.style.transform = `translateX(-${offset}px)`;
-        });
-    }
-
-    nextBtn.addEventListener("click", () => {
-        calculateOffsetWidth();
-        offset = Math.min(offset + defaultSize, maxOffset);
-        applyTransform();
-    });
-
-    prevBtn.addEventListener("click", () => {
-        calculateOffsetWidth();
-        offset = Math.max(offset - defaultSize, 0);
-        applyTransform();
-    });
-
-    function calculateOffsetWidth() {
-        firstCard = playCards[0];
-        totalWidth = firstCard.parentElement.scrollWidth;
-        visibleWidth = firstCard.parentElement.clientWidth;
-        maxOffset = totalWidth - visibleWidth;
-    }
+function calculateOffsetWidth() {
+    firstCard = playCards[0];
+    totalWidth = firstCard.parentElement.scrollWidth;
+    visibleWidth = firstCard.parentElement.clientWidth;
+    maxOffset = totalWidth - visibleWidth;
+}
 
 
 function getYouTubeTitle(link, card, i) {
