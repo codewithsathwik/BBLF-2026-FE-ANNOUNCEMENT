@@ -747,3 +747,116 @@ footer p a:hover {
         margin-bottom: 25px;
     }
 }
+
+
+/* =======================meadia section======================= */
+.media {
+    background-color: var(--color-primary);
+}
+
+.media-container h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: var(--font-ink-main);
+    text-align: center;
+}
+
+.media-prev,
+.media-next {
+    background-color: white;
+    border: 3px solid var(--color-alt);
+    background-color: white;
+    font-size: 25px;
+    color: var(--color-alt);
+    border: 3px solid var(--color-alt);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-prev img,
+.media-next img {
+    width: 100%;
+}
+
+.media-next img {
+    transform: rotate(180deg);
+}
+
+/* card */
+.media-slider {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+
+.media-track {
+    padding: 20px 0px;
+    gap: 30px;
+    display: flex;
+    animation: scroll 10s infinite linear;
+    padding-right: 30px;
+}
+
+.media-slider:hover .media-track {
+    animation-play-state: paused;
+}
+
+.media-card {
+    flex: 0 0 300px;
+    display: block;
+    min-width: 300px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-2);
+    transition: all 300ms ease;
+}
+
+.media-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-10px);
+}
+
+.media-img img {
+    min-width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.media-details {
+    font-size: 14px;
+    color: var(--font-ink-head);
+    padding: 0px 10px 10px;
+}
+
+.media-link {
+    font-weight: 200;
+    font-size: 13px;
+    color: gray;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.media-des {
+    margin: 10px 0px;
+}
+
+/* smaller media card for smaller width */
+@media (max-width : 600px) {
+    .media-card {
+        min-width: 270px;
+        flex: 0 0 270px;
+    }
+}
+
+/* animation for media section */
+@keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}
+}
