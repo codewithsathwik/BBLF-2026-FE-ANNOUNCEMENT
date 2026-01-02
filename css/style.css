@@ -108,7 +108,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/images/bg-overlay-hero.png");
+    background-image: url("/assets/images/bg-overlay-hero.webp");
     background-position: center;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
@@ -117,7 +117,7 @@ hr {
 
 @media (max-width : 1110px) {
     .hero {
-        background-image: url("/assets/images/bg-overlay-large.png");
+        background-image: url("/assets/images/bg-overlay-large.webp");
         /* background-position:  center; */
 
     }
@@ -125,7 +125,7 @@ hr {
 
 @media (max-width : 600px) {
     .hero {
-        background-image: url("/assets/images/bg-overlay-mobile.png");
+        background-image: url("/assets/images/bg-overlay-mobile.webp");
         /* background-position: center; */
 
     }
