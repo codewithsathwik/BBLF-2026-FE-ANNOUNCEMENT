@@ -16,7 +16,6 @@
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
@@ -26,7 +25,6 @@
 a {
     color: inherit;
     text-decoration: none;
-
 }
 
 html,
@@ -37,8 +35,7 @@ body {
 }
 
 section {
-    padding: 40px 0px;
-    /* padding for all individual section*/
+    padding: 40px 0px;  /* padding for all individual section*/
 }
 
 @media (max-width : 720px) {
@@ -118,16 +115,12 @@ hr {
 @media (max-width : 1110px) {
     .hero {
         background-image: url("/assets/images/bg-overlay-large.webp");
-        /* background-position:  center; */
-
     }
 }
 
 @media (max-width : 600px) {
     .hero {
         background-image: url("/assets/images/bg-overlay-mobile.webp");
-        /* background-position: center; */
-
     }
 }
 
@@ -356,10 +349,9 @@ hr {
 }
 
 .active-slide {
-    background-color: var(--font-ink-alt);
+    background-color: var(--font-ink-alt);  /*to kepp the select color alt*/
 }
 
-/*to kepp the select colorc hange*/
 
 /* left and right buttons in slider of playlist section */
 .next,
@@ -535,7 +527,7 @@ footer p a:hover {
     font-weight: 900;
     color: transparent;
     background-clip: text;
-    background-image: linear-gradient(180deg, var(--font-ink-main) 15%, var(--color-primary) 80%, var(--font-ink-alt) 100%);
+    background-image: linear-gradient(180deg, var(--font-ink-alt) 15%, var(--color-primary) 80%, var(--font-ink-alt) 100%);
     letter-spacing: 2px;
 }
 
