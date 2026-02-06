@@ -25,7 +25,7 @@
 a {
     color: inherit;
     text-decoration: none;
-}
+} 
 
 html,
 body {
@@ -105,7 +105,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/images/bg-overlay-hero.webp");
+    /* background-image: url("/assets/images/bg-overlay-hero.webp"); */
     background-position: center;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
@@ -114,13 +114,13 @@ hr {
 
 @media (max-width : 1110px) {
     .hero {
-        background-image: url("/assets/images/bg-overlay-large.webp");
+        /* background-image: url("/assets/images/bg-overlay-large.webp"); */
     }
 }
 
 @media (max-width : 600px) {
     .hero {
-        background-image: url("/assets/images/bg-overlay-mobile.webp");
+        /* background-image: url("/assets/images/bg-overlay-mobile.webp"); */
     }
 }
 
@@ -171,6 +171,22 @@ hr {
     .hero-text {
         gap: 15px;
     }
+}
+
+.countdown {
+    /* max-width: px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    color: var(--font-ink-main);
+    max-width: 300px;
+    font-weight: 600;
+}
+
+.part {
+    text-align: center;
+    padding: 5px;
 }
 
 /* ================Archive for old edition of events================ */
@@ -510,11 +526,11 @@ footer p a:hover {
     color: var(--font-ink-alt);
 }
 
-.footer-hashtag-container {
+.hero-hashtag-container {
     width: 100%;
 }
 
-.footer-hashtag {
+.hero-hashtag {
     text-align: center;
     color: white;
     margin: 0;
@@ -527,7 +543,7 @@ footer p a:hover {
     font-weight: 900;
     color: transparent;
     background-clip: text;
-    background-image: linear-gradient(180deg, var(--font-ink-alt) 15%, var(--color-primary) 80%, var(--font-ink-alt) 100%);
+    background-image: linear-gradient(180deg, var(--font-ink-main) 15%, var(--color-primary) 80%, var(--font-ink-main) 100%);
     letter-spacing: 2px;
 }
 

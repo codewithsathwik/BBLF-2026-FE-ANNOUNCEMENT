@@ -99,3 +99,34 @@ function duplicateMediaTrack() {
 if(mediaSlider){
     duplicateMediaTrack();
 }
+
+//Timer countdown for the event
+// ================timer for the event================
+
+const eventDate = new Date("2026-08-21 GMT+05:30").getTime(); // IN YYYY-MM-DD and time zone for corrrect date
+const d = document.getElementById("d");
+const h = document.getElementById("h");
+const m = document.getElementById("m");
+const s = document.getElementById("s");
+
+countdown();
+setInterval(countdown, 1000);
+
+function countdown() {
+    if (!d || !h || !m || !s)
+        return;
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    if (distance > 0) {
+        d.textContent = Math.floor(distance / (1000 * 86400));
+        h.textContent = Math.floor(distance % (1000 * 86400) / (1000 * 3600));
+        m.textContent = Math.floor(distance % (1000 * 3600) / (1000 * 60));
+        s.textContent = Math.floor(distance % (1000 * 60) / (1000));
+    }
+    else {
+        d.textContent = "0";
+        h.textContent = "0";
+        m.textContent = "0";
+        s.textContent = "0";
+    }
+}
