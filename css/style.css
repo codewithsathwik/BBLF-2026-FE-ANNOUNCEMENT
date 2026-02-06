@@ -130,12 +130,12 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    /* gap: 30px; */
 }
 
 .hero-main {
     line-height: 1.1;
-    margin: .25rem 0 1rem;
+    margin: 20px 0 30px !important;
 }
 
 .hero h1 {
@@ -167,11 +167,7 @@ hr {
     font-style: normal;
 }
 
-@media (max-width: 550px) {
-    .hero-text {
-        gap: 15px;
-    }
-}
+
 
 .countdown {
     /* max-width: px; */
@@ -180,14 +176,38 @@ hr {
     justify-content: space-around;
     gap: 10px;
     color: var(--font-ink-main);
-    max-width: 300px;
+    max-width: fit-content;
     font-weight: 600;
 }
 
 .part {
     text-align: center;
     padding: 5px;
+    font-size: 19px;
 }
+
+.hero-date{
+    margin: 30px 0 0px !important;
+    border: 2px solid var(--font-ink-alt);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+.hero-date h2{margin: 0px 0 20px;}
+
+@media (max-width: 760px) {
+    .hero-text {
+        gap: 15px;
+    }
+    .part{font-size: 16px;}
+    .hero-main{
+        margin: 0px 0 0px !important;
+    }
+    .hero-date{margin: 15px 0 0px !important;}
+}
+
 
 /* ================Archive for old edition of events================ */
 .old-archives {
