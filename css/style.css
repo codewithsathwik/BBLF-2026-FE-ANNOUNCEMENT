@@ -111,6 +111,8 @@ hr {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background: linear-gradient(145deg, rgba(152, 216, 200, 1) 0%, rgba(221, 242, 253, 1) 50%);
+    
 }
 
 .hero-text {
@@ -880,3 +882,17 @@ footer p a:hover {
     0% {transform: translateX(0);}
     100% {transform: translateX(-100%);}
 }
+
+.hero-hashtag{
+  animation: heroFloat 6s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+
+
+
+
