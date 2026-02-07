@@ -96,7 +96,7 @@ function duplicateMediaTrack() {
     mediaSlider.appendChild(duplicateTrack);
 }
 
-if(mediaSlider){
+if (mediaSlider) {
     duplicateMediaTrack();
 }
 
@@ -130,3 +130,42 @@ function countdown() {
         s.textContent = "0";
     }
 }
+
+
+const phrases = [
+    "21, 22, 23 August 2026",
+];
+
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typewriterElement = document.querySelector(".hero-main-date")
+const typingSpeed = 80;
+const deletingSpeed = 50;
+const pauseBetweenPhrases = 3000;
+
+function typeWriter() {
+    const currentPhrase = phrases[phraseIndex];
+    if (isDeleting) {
+        typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    let speed = isDeleting ? deletingSpeed : typingSpeed;
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+        speed = pauseBetweenPhrases;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        speed = 500;
+    }
+
+    setTimeout(typeWriter, speed);
+}
+setTimeout(typeWriter, 1000);
+
