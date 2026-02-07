@@ -5,7 +5,8 @@
     --font-alt: "Red Rose", serif;
     --scroll-padding: 10px;
     --color-primary: #DDF2FD;
-    --color-alt: #4AB2E6;
+    /* --color-alt: #4AB2E6; */
+    --color-alt:  #6B9BD1;
     --color-alt2: #F8F1E6D9;
     --font-ink-main: #0B4968;
     --font-ink-alt: #FF9F00;
@@ -16,7 +17,7 @@
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --color-mint : #98D8C8;
-   --color-orange : #FF6B6B;
+    --color-orange : #FF6B6B;
 }
 
 * {
@@ -176,6 +177,7 @@ hr {
     backdrop-filter: blur(10px);
     width: 100px;
 }
+
 
 .hero-date{
     margin: 30px 0 0px !important;
