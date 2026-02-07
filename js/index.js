@@ -134,6 +134,7 @@ function countdown() {
 
 const phrases = [
     "21, 22, 23 August 2026",
+    "Join Us"
 ];
 
 let phraseIndex = 0;
