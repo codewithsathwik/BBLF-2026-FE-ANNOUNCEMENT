@@ -86,21 +86,7 @@ function getYouTubeTitle(link, card, i) {
         .catch(error => console.error('Error:', error));
 }
 
-//================media card - duplication for infinite scroll================
-const mediaTrack = document.querySelector(".media-track");
-const mediaSlider = document.querySelector(".media-slider");
 
-function duplicateMediaTrack() {
-    const duplicateTrack = mediaTrack.cloneNode(true);
-    duplicateTrack.classList.add("duplicate-media-track");
-    mediaSlider.appendChild(duplicateTrack);
-}
-
-if (mediaSlider) {
-    duplicateMediaTrack();
-}
-
-//Timer countdown for the event
 // ================timer for the event================
 
 const eventDate = new Date("2026-08-21 GMT+05:30").getTime(); // IN YYYY-MM-DD and time zone for corrrect date
