@@ -17,7 +17,10 @@
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --color-mint : #98D8C8;
-    --color-orange : #FF6B6B;
+    --color-orange : #EA6B56;
+    --color-blue : #6B88FE;
+    --color-yellow : #FBD36D;
+    --color-pink : #FAD0CE;
 }
 
 * {
@@ -173,8 +176,9 @@ hr {
     text-align: center;
     padding: 5px;
     font-size: 19px;
-    border: 2px solid var(--font-ink-alt);
-    border-radius: 12px;
+    border: 2px solid var(--color-blue);
+    /* border: 2px solid var(--font-ink-alt); */
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     width: 100px;
