@@ -156,10 +156,12 @@ hr {
 }
 
 .hero-tag {
-    color: #E8A446;
+    /* color: #E8A446; */
+    color: var(--font-ink-alt);
     font-family: "Allura", cursive !important;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
+    font-size: clamp(30px, 3vw, 45px) !important;
 }
 
 .countdown {
