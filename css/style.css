@@ -130,12 +130,17 @@ hr {
 .hero-main {
     line-height: 1.1;
     margin: 20px 0 30px !important;
-    font-size: clamp(30px, 3vw, 45px)
+    /* font-size: clamp(30px, 3vw, 45px); */
+    font-size: clamp(2.6rem, 5vw, 10rem) !important;
 }
 
 .hero h1 {
     font-size: clamp(26px, 3vw, 45px);
     margin: 0;
+}
+
+.heor-edition, .hero-soon, .hero-main-date{
+    font-size: clamp(25px, 3vw, 35px) !important;
 }
 
 .hero-logo {
@@ -189,9 +194,13 @@ hr {
 
 .hero-date{
     margin: 30px 0 0px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-main-date{min-height: 2.5rem;}
+.hero-main-date, .hero-main-venue{min-height: 3.5rem;}
 
 .hero-date h2{margin: 0px 0 20px;}
 

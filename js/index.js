@@ -120,8 +120,13 @@ function countdown() {
 
 const phrases = [
     "21, 22, 23 August 2026",
+    "St. John's Auditorium, Koramangala, Bengaluru, Karnataka - 560034",
+    // "St. John's Auditorium",
+    // "Koramangala, Bengaluru",
+    // "Karnataka - 560034",
     "Join Us"
 ];
+
 
 let phraseIndex = 0;
 let charIndex = 0;
