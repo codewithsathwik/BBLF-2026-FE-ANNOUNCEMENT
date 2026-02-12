@@ -160,6 +160,9 @@ hr {
 }
 
 .hero-hashtag {
+    /* min-height: 150px; */
+    /* min-height: clamp(8rem, 15vw + 3rem, 30rem); */
+    /* min-height: 150px; */
     text-align: center;
     color: white;
     margin: 0;
@@ -173,7 +176,6 @@ hr {
     background-image: linear-gradient(180deg, var(--font-ink-main) 15%, var(--color-mint) 80%, var(--font-ink-main) 100%);
     letter-spacing: 2px;
     font-size: clamp(2rem, 5vw + 1rem, 10rem) !important;
-
 }
 
 .hero-soon, .hero-main-date{
@@ -925,70 +927,6 @@ footer p a:hover {
     0% {transform: translateX(0);}
     100% {transform: translateX(-100%);}
 }
-
-.hero-edition{
-    animation: heroFloat 6s ease-in-out infinite;
-}
-
-@keyframes heroFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-.hero-hashtag{
-    background-size: 200% 200%;
-    letter-spacing: 2px;
-    /* animation: gradient-shift 4s ease infinite; */
-    background-image: linear-gradient(
-        45deg,
-        var(--color-mint) 0%,
-        var(--color-blue) 20%,
-        var(--color-orange) 40%,
-        var(--color-yellow) 60%,
-        var(--color-pink) 80%,
-        var(--color-mint) 100%
-    );
-    background-size: 300% 300%;
-    letter-spacing: 2px;
-    animation: rainbow-flow 6s ease-in-out infinite;
-    filter: drop-shadow(0 0 20px rgba(78, 205, 196, 0.4));
-}
-
-/* @keyframes gradient-shift {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 0% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
-} */
-
-@keyframes rainbow-flow {
-    0% {
-        background-position: 0% 50%;
-        filter: drop-shadow(0 0 20px rgba(152, 216, 200, 0.4)) hue-rotate(0deg);
-    }
-    25% {
-        background-position: 50% 100%;
-        filter: drop-shadow(0 0 25px rgba(107, 136, 254, 0.5)) hue-rotate(90deg);
-    }
-    50% {
-        background-position: 100% 50%;
-        filter: drop-shadow(0 0 30px rgba(234, 107, 86, 0.6)) hue-rotate(180deg);
-    }
-    75% {
-        background-position: 50% 0%;
-        filter: drop-shadow(0 0 25px rgba(251, 211, 109, 0.5)) hue-rotate(270deg);
-    }
-    100% {
-        background-position: 0% 50%;
-        filter: drop-shadow(0 0 20px rgba(152, 216, 200, 0.4)) hue-rotate(360deg);
-    }
-}
-
 
 
 

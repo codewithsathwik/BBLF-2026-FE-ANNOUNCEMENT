@@ -1,3 +1,6 @@
+// initialize its empty
+const typewriterElement = document.querySelector(".hero-hashtag");
+typewriterElement.textContent = '\u200B';
 
 // ================sliders================
 
@@ -118,31 +121,30 @@ function countdown() {
 }
 
 
+//Typing animation for the edition
 const phrases = [
-    "21, 22, 23 August 2026",
-    "St. John's Auditorium, Koramangala, Bengaluru, Karnataka - 560034",
-    // "St. John's Auditorium",
-    // "Koramangala, Bengaluru",
-    // "Karnataka - 560034",
-    "Join Us"
+    "EDITION 3"
 ];
-
 
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-const typewriterElement = document.querySelector(".hero-main-date")
-const typingSpeed = 80;
-const deletingSpeed = 50;
+
+const typingSpeed = 150;
+const deletingSpeed = 100;
 const pauseBetweenPhrases = 3000;
 
+// Add a zero-width character to maintain height
 function typeWriter() {
     const currentPhrase = phrases[phraseIndex];
+    
     if (isDeleting) {
-        typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+        const text = currentPhrase.substring(0, charIndex - 1);
+        typewriterElement.textContent = text || '\u200B'; // Zero-width space when empty
         charIndex--;
     } else {
-        typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+        const text = currentPhrase.substring(0, charIndex + 1);
+        typewriterElement.textContent = text || '\u200B'; // Zero-width space when empty
         charIndex++;
     }
 
@@ -159,5 +161,6 @@ function typeWriter() {
 
     setTimeout(typeWriter, speed);
 }
+
 setTimeout(typeWriter, 1000);
 
