@@ -130,7 +130,7 @@ let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
-const typingSpeed = 150;
+const typingSpeed = 100;
 const deletingSpeed = 100;
 const pauseBetweenPhrases = 3000;
 
