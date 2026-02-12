@@ -245,19 +245,26 @@ hr {
     .hero-text {
         gap: 15px;
     }
-    .part{font-size: 16px; width: 82px;}
+    .countdown{gap: 7px;}
+    .part{font-size: 14px; width: 75px;}
     .hero-main{
         margin: 0px 0 0px !important;
     }
     .hero-date{margin: 15px 0 0px !important;}
-    .countdown{gap: 5px;}
-    .part{font-size: 14px; width: 75px;}
+
     .hero-grid{
         grid-template-columns: 1fr;
+        gap: 15px;
     }
     .hero-logo {
         width: 200px;
     }
+    .hero-details{padding: 20px 0;}
+}
+
+@media (max-width : 350px) {
+    .countdown{gap: 5px;}
+    .part{font-size: 12px; width: 65px;}
 }
 
 /* ================Archive for old edition of events================ */
